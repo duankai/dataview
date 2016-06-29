@@ -11,7 +11,8 @@ app.use('/static/', express.static(path.join(__dirname, './dist')))
 app.listen(port, function(err){
   if(err){
     throw new Error(err)
-  }else{
+  }else
+  {
     console.log(`server listen on:  ${port}`)
   }
 })
