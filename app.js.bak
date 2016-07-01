@@ -16,10 +16,6 @@ app.get('/heatmap', function(req, res){
     res.sendFile(path.join(__dirname, './client/heatmap.html'))
 })
 
-app.get('/province_user', function(req, res){
-    res.sendFile(path.join(__dirname, './client/province_user.html'))
-})
-
 app.use('/static/', express.static(path.join(__dirname, './dist')))
 
 

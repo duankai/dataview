@@ -1,0 +1,115 @@
+﻿<html>
+	<script src="/static/echarts.min.js"></script>
+	<body>
+		hello world
+		<div id="main" style="width:1200px;height:800px; margin-top:100px"></div>
+		<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+
+        title : {
+            text: '平安好医生用户各省人数分布',
+            subtext: '',
+            x:'center'
+        },
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {
+            orient: 'vertical',
+            left: 'left',
+            data: ["澳门特别行区",
+										"河北省",
+										"四川省",
+										"江苏省",
+										"广西壮族自治区",
+										"云南省",
+										"贵州省",
+										"福建省",
+										"北京市",
+										"山西省",
+										"海南省",
+										"上海市",
+										"宁夏回族自治区",
+										"台湾省",
+										"青海省",
+										"天津市",
+										"广东省",
+										"江西省",
+										"河南省",
+										"湖南省",
+										"安徽省",
+										"吉林省",
+										"辽宁省",
+										"浙江省",
+										"西藏自治区",
+										"湖北省",
+										"重庆市",
+										"新疆维吾尔自治区",
+										"内蒙古自治区",
+										"黑龙江省",
+										"香港特别行区",
+										"陕西省",
+										"甘肃省",
+										"山东省"]
+        },
+        series : [
+        {
+            name: '科室',
+            type: 'pie',
+            radius : '90%',
+            center: ['50%', '55%'],
+            data:[
+                {name:"澳门特别行政区",value:159}, 
+								{name:"河北省",value:5048170}, 
+								{name:"四川省",value:3052164},  
+								{name:"江苏省",value:4120892}, 
+								{name:"广西壮族自治区",value:1389378}, 
+								{name:"云南省",value:685577}, 
+								{name:"贵州省",value:650198}, 
+								{name:"福建省",value:2390186}, 
+								{name:"北京市",value:8455662}, 
+								{name:"山西省",value:3272333}, 
+								{name:"海南省",value:257671},  
+								{name:"上海市",value:1150271}, 
+								{name:"宁夏回族自治区",value:286850}, 
+								{name:"台湾省",value:549}, 
+								{name:"青海省",value:123451}, 
+								{name:"天津市",value:3354284}, 
+								{name:"广东省",value:9280660}, 
+								{name:"江西省",value:1593669}, 
+								{name:"河南省",value:5651850}, 
+								{name:"湖南省",value:2575825}, 
+								{name:"安徽省",value:1821177}, 
+								{name:"吉林省",value:1858284}, 
+								{name:"辽宁省",value:3831474},  
+								{name:"浙江省",value:5129856}, 
+								{name:"西藏自治区",value:27268}, 
+								{name:"湖北省",value:2393468}, 
+								{name:"重庆市",value:1646305}, 
+								{name:"新疆维吾尔自治区",value:800901}, 
+								{name:"内蒙古自治区",value:1505952}, 
+								{name:"黑龙江省",value:3206643}, 
+								{name:"香港特别行政区",value:684}, 
+								{name:"陕西省",value:2066025}, 
+								{name:"甘肃省",value:996687}, 
+								{name:"山东省",value:6269670}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+        myChart.setOption(option);
+  	</script>
+	</body>
+</html>
